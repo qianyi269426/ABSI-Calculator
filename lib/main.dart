@@ -320,11 +320,7 @@ class _MyAppState extends State<MyApp> {
                     color: Colors.blueGrey[50],
                   ),
                 ],
-              ),
-              SizedBox(
-                height: 2,
-              ),
-              
+              ),                            
             ], //children
           ),
         ),
