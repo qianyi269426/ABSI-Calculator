@@ -274,7 +274,7 @@ class _MyAppState extends State<MyApp> {
                     height: 30,
                     // ignore: deprecated_member_use
                     child: RaisedButton(
-                      child: Text("Calculate"),
+                      child: Text("Calculate",style:TextStyle(fontSize: 16)),
                       onPressed: cal,
                     ),
                   )
@@ -324,20 +324,7 @@ class _MyAppState extends State<MyApp> {
               SizedBox(
                 height: 2,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Text(
-                      "ABSI z-score",
-                      style: TextStyle(fontSize: 18),
-                    ),
-                    width: 280,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                  ),
-                ],
-              ),
+              
             ], //children
           ),
         ),
