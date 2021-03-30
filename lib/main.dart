@@ -88,7 +88,8 @@ class _MyAppState extends State<MyApp> {
                     height: 30,
                     color: Colors.blueGrey[50],
                     child: TextField(
-                      controller: yearController,textAlign: TextAlign.center,
+                      controller: yearController,
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Container(
@@ -118,7 +119,8 @@ class _MyAppState extends State<MyApp> {
                     height: 30,
                     color: Colors.blueGrey[50],
                     child: TextField(
-                      controller: heightController,textAlign: TextAlign.center,
+                      controller: heightController,
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Container(
@@ -143,14 +145,6 @@ class _MyAppState extends State<MyApp> {
                           DropdownMenuItem(
                             child: Text("ft"),
                             value: 4,
-                          ),
-                          DropdownMenuItem(
-                            child: Text("ft/in"),
-                            value: 5,
-                          ),
-                          DropdownMenuItem(
-                            child: Text("m/cm"),
-                            value: 6,
                           ),
                         ],
                         onChanged: (value) {
@@ -181,7 +175,8 @@ class _MyAppState extends State<MyApp> {
                     height: 30,
                     color: Colors.blueGrey[50],
                     child: TextField(
-                      controller: weightController,textAlign: TextAlign.center,
+                      controller: weightController,
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Container(
@@ -232,7 +227,8 @@ class _MyAppState extends State<MyApp> {
                     height: 30,
                     color: Colors.blueGrey[50],
                     child: TextField(
-                      controller: waistController,textAlign: TextAlign.center,
+                      controller: waistController,
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Container(
@@ -264,17 +260,17 @@ class _MyAppState extends State<MyApp> {
                 ],
               ),
               SizedBox(
-                height: 30,
+                height: 50,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     width: 100,
-                    height: 30,
+                    height: 40,
                     // ignore: deprecated_member_use
                     child: RaisedButton(
-                      child: Text("Calculate",style:TextStyle(fontSize: 16)),
+                      child: Text("Calculate", style: TextStyle(fontSize: 16)),
                       onPressed: cal,
                     ),
                   )
@@ -320,7 +316,7 @@ class _MyAppState extends State<MyApp> {
                     color: Colors.blueGrey[50],
                   ),
                 ],
-              ),                            
+              ),
             ], //children
           ),
         ),
