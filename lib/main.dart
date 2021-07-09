@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -321,7 +322,8 @@ class _MyAppState extends State<MyApp> {
                           height: 40,
                           child: ElevatedButton(
                             onPressed: cal,
-                            child: Text("Calculate"),
+                            child: Text("Calculate",
+                                style: TextStyle(color: Colors.black)),
                             style: ElevatedButton.styleFrom(
                                 primary: Colors.greenAccent),
                           ),
