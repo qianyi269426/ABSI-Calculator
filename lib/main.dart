@@ -25,323 +25,312 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          body: Center(
+        appBar: AppBar(
+        title: Text('ABSI Calculator',style: TextStyle(fontWeight: FontWeight.bold),),
+        backgroundColor: Colors.deepPurpleAccent
+      ),
+          body: SingleChildScrollView(
+            child: Center(
         child: Container(
-          width: 300,
-          height: 480,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: 30,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Text(
-                      "Sex",
-                      style: TextStyle(fontSize: 18),
-                    ),
-                    width: 200,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                  ),
-                  Container(
-                    width: 80,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                    child: DropdownButton(
-                        value: _value,
-                        items: [
-                          DropdownMenuItem(
-                            child: Text("Male"),
-                            value: 1,
-                          ),
-                          DropdownMenuItem(
-                            child: Text("Female"),
-                            value: 2,
-                          ),
-                        ],
-                        onChanged: (value) {
-                          setState(() {
-                            _value = value;
-                          });
-                        }),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 2,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Text("Age", style: TextStyle(fontSize: 18)),
-                    width: 160,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                  ),
-                  Container(
-                    width: 70,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                    child: TextField(
-                      controller: yearController,textAlign: TextAlign.center,
-                    ),
-                  ),
-                  Container(
-                    width: 50,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                    child: Text("years", style: TextStyle(fontSize: 18)),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 2,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
+            width: 300,
+            height: 480,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 30,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
                       child: Text(
-                        "Height",
+                        "Sex",
                         style: TextStyle(fontSize: 18),
+                      ),
+                      width: 200,
+                      height: 30,
+                      color: Colors.blueGrey[50],
+                    ),
+                    Container(
+                      width: 80,
+                      height: 30,
+                      color: Colors.blueGrey[50],
+                      child: DropdownButton(
+                          value: _value,
+                          items: [
+                            DropdownMenuItem(
+                              child: Text("Male"),
+                              value: 1,
+                            ),
+                            DropdownMenuItem(
+                              child: Text("Female"),
+                              value: 2,
+                            ),
+                          ],
+                          onChanged: (value) {
+                            setState(() {
+                              _value = value;
+                            });
+                          }),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 2,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      child: Text("Age", style: TextStyle(fontSize: 18)),
+                      width: 160,
+                      height: 30,
+                      color: Colors.blueGrey[50],
+                    ),
+                    Container(
+                      width: 70,
+                      height: 30,
+                      color: Colors.blueGrey[50],
+                      child: TextField(
+                        controller: yearController,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Container(
+                      width: 50,
+                      height: 30,
+                      color: Colors.blueGrey[50],
+                      child: Text("years", style: TextStyle(fontSize: 18)),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 2,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                        child: Text(
+                          "Height",
+                          style: TextStyle(fontSize: 18),
+                        ),
+                        width: 160,
+                        height: 30,
+                        color: Colors.blueGrey[50]),
+                    Container(
+                      width: 50,
+                      height: 30,
+                      color: Colors.blueGrey[50],
+                      child: TextField(
+                        controller: heightController,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Container(
+                      width: 70,
+                      height: 30,
+                      color: Colors.blueGrey[50],
+                      child: DropdownButton(
+                          value: _value1,
+                          items: [
+                            DropdownMenuItem(
+                              child: Text("cm"),
+                              value: 1,
+                            ),
+                            DropdownMenuItem(
+                              child: Text("m"),
+                              value: 2,
+                            ),
+                            DropdownMenuItem(
+                              child: Text("in"),
+                              value: 3,
+                            ),
+                            DropdownMenuItem(
+                              child: Text("ft"),
+                              value: 4,
+                            ),
+                          ],
+                          onChanged: (value) {
+                            setState(() {
+                              _value1 = value;
+                            });
+                          }),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 2,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      child: Text(
+                        "Weight",
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      width: 150,
+                      height: 30,
+                      color: Colors.blueGrey[50],
+                    ),
+                    Container(
+                      width: 60,
+                      height: 30,
+                      color: Colors.blueGrey[50],
+                      child: TextField(
+                        controller: weightController,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Container(
+                      width: 70,
+                      height: 30,
+                      color: Colors.blueGrey[50],
+                      child: DropdownButton(
+                          value: _value2,
+                          items: [
+                            DropdownMenuItem(
+                              child: Text("kg"),
+                              value: 1,
+                            ),
+                            DropdownMenuItem(
+                              child: Text("lb"),
+                              value: 2,
+                            ),
+                            DropdownMenuItem(
+                              child: Text("stone"),
+                              value: 3,
+                            ),
+                          ],
+                          onChanged: (value) {
+                            setState(() {
+                              _value2 = value;
+                            });
+                          }),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 2,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      child: Text(
+                        "Waist Circumference",
+                        style: TextStyle(fontSize: 16),
                       ),
                       width: 160,
                       height: 30,
-                      color: Colors.blueGrey[50]),
-                  Container(
-                    width: 50,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                    child: TextField(
-                      controller: heightController,textAlign: TextAlign.center,
+                      color: Colors.blueGrey[50],
                     ),
-                  ),
-                  Container(
-                    width: 70,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                    child: DropdownButton(
-                        value: _value1,
-                        items: [
-                          DropdownMenuItem(
-                            child: Text("cm"),
-                            value: 1,
-                          ),
-                          DropdownMenuItem(
-                            child: Text("m"),
-                            value: 2,
-                          ),
-                          DropdownMenuItem(
-                            child: Text("in"),
-                            value: 3,
-                          ),
-                          DropdownMenuItem(
-                            child: Text("ft"),
-                            value: 4,
-                          ),
-                          DropdownMenuItem(
-                            child: Text("ft/in"),
-                            value: 5,
-                          ),
-                          DropdownMenuItem(
-                            child: Text("m/cm"),
-                            value: 6,
-                          ),
-                        ],
-                        onChanged: (value) {
-                          setState(() {
-                            _value1 = value;
-                          });
-                        }),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 2,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Text(
-                      "Weight",
-                      style: TextStyle(fontSize: 18),
+                    Container(
+                      width: 50,
+                      height: 30,
+                      color: Colors.blueGrey[50],
+                      child: TextField(
+                        controller: waistController,
+                        textAlign: TextAlign.center,
+                      ),
                     ),
-                    width: 150,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                  ),
-                  Container(
-                    width: 60,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                    child: TextField(
-                      controller: weightController,textAlign: TextAlign.center,
+                    Container(
+                      width: 70,
+                      height: 30,
+                      color: Colors.blueGrey[50],
+                      child: DropdownButton(
+                          value: _value3,
+                          items: [
+                            DropdownMenuItem(
+                              child: Text("cm"),
+                              value: 1,
+                            ),
+                            DropdownMenuItem(
+                              child: Text("m"),
+                              value: 2,
+                            ),
+                            DropdownMenuItem(
+                              child: Text("in"),
+                              value: 3,
+                            ),
+                          ],
+                          onChanged: (value) {
+                            setState(() {
+                              _value3 = value;
+                            });
+                          }),
                     ),
-                  ),
-                  Container(
-                    width: 70,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                    child: DropdownButton(
-                        value: _value2,
-                        items: [
-                          DropdownMenuItem(
-                            child: Text("kg"),
-                            value: 1,
-                          ),
-                          DropdownMenuItem(
-                            child: Text("lb"),
-                            value: 2,
-                          ),
-                          DropdownMenuItem(
-                            child: Text("stone"),
-                            value: 3,
-                          ),
-                        ],
-                        onChanged: (value) {
-                          setState(() {
-                            _value2 = value;
-                          });
-                        }),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 2,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Text(
-                      "Waist Circumference",
-                      style: TextStyle(fontSize: 16),
+                  ],
+                ),
+                
+                SizedBox(
+                  height: 50,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      child: Text(
+                        "Result",
+                        style: TextStyle(fontSize: 18,color: Colors.white,fontWeight:FontWeight.bold),
+                      ),
+                      width: 280,
+                      height: 30,
+                      color: Colors.deepPurpleAccent,
                     ),
-                    width: 160,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                  ),
-                  Container(
-                    width: 50,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                    child: TextField(
-                      controller: waistController,textAlign: TextAlign.center,
+                  ],
+                ),
+                SizedBox(
+                  height: 2,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      child: Text(
+                        "ABSI",
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      width: 200,
+                      height: 30,
+                      color: Colors.blueGrey[50],
                     ),
-                  ),
-                  Container(
-                    width: 70,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                    child: DropdownButton(
-                        value: _value3,
-                        items: [
-                          DropdownMenuItem(
-                            child: Text("cm"),
-                            value: 1,
-                          ),
-                          DropdownMenuItem(
-                            child: Text("m"),
-                            value: 2,
-                          ),
-                          DropdownMenuItem(
-                            child: Text("in"),
-                            value: 3,
-                          ),
-                        ],
-                        onChanged: (value) {
-                          setState(() {
-                            _value3 = value;
-                          });
-                        }),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    width: 100,
-                    height: 30,
-                    // ignore: deprecated_member_use
-                    child: RaisedButton(
-                      child: Text("Calculate"),
-                      onPressed: cal,
+                    Container(
+                      child: Text(absi.toStringAsFixed(4),
+                          style: TextStyle(fontSize: 18)),
+                      width: 80,
+                      height: 30,
+                      color: Colors.blueGrey[50],
                     ),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 50,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Text(
-                      "Result",
-                      style: TextStyle(fontSize: 18),
-                    ),
-                    width: 280,
-                    height: 30,
-                    color: Colors.blueGrey[200],
+                    
+                  ],
+                ),
+                
+                SizedBox(
+                  height: 50,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                  alignment: Alignment.bottomRight,
+                  height: 40,
+                  child: ElevatedButton(
+                    onPressed: cal,
+                    child: Text("Calculate"),
+                    style: ElevatedButton.styleFrom(primary: Colors.greenAccent),
                   ),
-                ],
-              ),
-              SizedBox(
-                height: 2,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Text(
-                      "ABSI",
-                      style: TextStyle(fontSize: 18),
-                    ),
-                    width: 200,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                  ),
-                  Container(
-                    child: Text(absi.toStringAsFixed(4),
-                        style: TextStyle(fontSize: 18)),
-                    width: 80,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 2,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Text(
-                      "ABSI z-score",
-                      style: TextStyle(fontSize: 18),
-                    ),
-                    width: 280,
-                    height: 30,
-                    color: Colors.blueGrey[50],
-                  ),
-                ],
-              ),
-            ], //children
-          ),
+                ),
+                  ],
+                ),
+
+              ], //children
+            ),
         ),
-      )),
+      ),
+          )),
     );
   }
 
